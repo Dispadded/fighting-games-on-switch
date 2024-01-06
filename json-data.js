@@ -1,7 +1,8 @@
-window[document.currentScript.getAttribute('data-var-name')] = JSON.stringify(
+window[document.currentScript.getAttribute('data-var-name')] = (
 [
   {
     "name": "Mortal Kombat 1",
+    "img": "https://cdn2.steamgriddb.com/thumb/ee518a68d0a28d15ef08325f0a86a576.jpg",
     "genre": [
       "Brutal"
     ],
@@ -29,6 +30,7 @@ window[document.currentScript.getAttribute('data-var-name')] = JSON.stringify(
   },
   {
     "name": "Mortal Kombat 11 Ultimate",
+    "img": "https://images.nintendolife.com/134c9f1eb07f9/mortal-kombat-11-cover.cover_small.jpg",
     "genre": [
       "Brutal"
     ],
@@ -52,6 +54,7 @@ window[document.currentScript.getAttribute('data-var-name')] = JSON.stringify(
   },
   {
     "name": "DnF Duel",
+    "img": "https://cdn2.steamgriddb.com/thumb/bb3dfe7c2f232afad04ae5abba61a82d.jpg",
     "genre": [
       "Anime"
     ],
@@ -67,6 +70,7 @@ window[document.currentScript.getAttribute('data-var-name')] = JSON.stringify(
   },
   {
     "name": "Dragon Ball FighterZ Ultimate",
+    "img": "https://images.nintendolife.com/0a4dc0dd51cb4/dragon-ball-fighterz-cover.cover_small.jpg",
     "genre": [
       "Anime",
       "2v2"
@@ -83,6 +87,7 @@ window[document.currentScript.getAttribute('data-var-name')] = JSON.stringify(
   },
   {
     "name": "Them's Fightin' Herds",
+    "img": "https://images.nintendolife.com/2dfd0453d3c89/thems-fightin-herds-cover.cover_small.jpg",
     "genre": [
       "Furry",
       "Pony"
@@ -99,6 +104,7 @@ window[document.currentScript.getAttribute('data-var-name')] = JSON.stringify(
   },
   {
     "name": "Melty Blood: Type Lumina",
+    "img": "https://cdn2.steamgriddb.com/thumb/b9ec24f64f9956cb7242f368c3502b92.jpg",
     "genre": [
       "Anime",
       "2D Sprites",
@@ -116,6 +122,7 @@ window[document.currentScript.getAttribute('data-var-name')] = JSON.stringify(
   },
   {
     "name": "Power Rangers: Battle For The Grid - Super Edition",
+    "img": "https://cdn2.steamgriddb.com/thumb/882f18b27b76fb9a22434edfe44fac3a.jpg",
     "genre": [
       "Low-budget",
       "TV Series",
@@ -135,6 +142,7 @@ window[document.currentScript.getAttribute('data-var-name')] = JSON.stringify(
   },
   {
     "name": "JoJo's Bizarre Adventure: All-Star Battle R Deluxe Edition",
+    "img": "https://cdn2.steamgriddb.com/thumb/3ccb6f1afa171436f1de74c0e83f1f8a.png",
     "genre": [
       "Anime"
     ],
