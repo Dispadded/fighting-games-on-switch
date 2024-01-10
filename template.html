@@ -121,76 +121,39 @@
 			</div>
 		</div>
 		
-		<script id="game-row-template" type="x-tmpl-mustache">
-      <tr>
-				<td><div class="thumbnail" style="background-image: url('{{img_url}}');"></div></td>
-				<td>{{ name }}</td>
-				<td>{{ genres }}</td>
-				<td>{{ characters }}</td>
-				<td>{{ price }}</td>
-			</tr>
-    </script>
-		
-		<script id="game-row-template-ideal-old" type="x-tmpl-squirrelly">
-			{{@each(it) => game}}
+		<script id="game-row-template" type="x-tmpl-eta" data-no-render>
+			<% it.forEach( function(game_data){ %>
+				<%
+					const name = game_data.name;
+					const img_url = game_data.img;
+					const genres = game_data.genre.join(', ');
+					const characters_obj = game_data.characters;
+					const price_obj = game_data.price;
+					const labels = game_data.labels;
+					
+					const characters_formatted = `${characters_obj.total_count} characters`;
+					const price_formatted = `${price_obj.amount}${price_obj.suffix}`;
+				%>
 				<tr>
-					<td><div class="thumbnail" style="background-image: url('{{game.img}}');"></div></td>
-					<td>{{ game.name }}</td>
-					<td>{{ game.genre.join(', ') }}</td>
-					<td>{{ game.characters.total_count }} characters</td>
-					<td>{{ game.price.amount }}</td>
+					<td><div class="thumbnail" style="background-image: url('<%= img_url %>');"></div></td>
+					<td><%= name %></td>
+					<td><%= genres %></td>
+					<td><%= characters_formatted %></td>
+					<td><%= price_formatted %></td>
 				</tr>
-			{{/each}}
+			<% }) %>
     </script>
 		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.1/mustache.min.js"></script>
-		<script src="https://unpkg.com/squirrelly"></script>
-		<script src="https://cdn.jsdelivr.net/npm/eta@3.2.0/dist/eta.umd.min.js"></script>
-		<script data-var-name="games_data" src="json-data.js">// var games_data = [...]</script>
-		<script>
+		<script src="https://unpkg.com/eta" data-no-render></script>
+		<script data-var-name="games_data" src="json-data.js" data-no-render>// var games_data = [...]</script>
+		<script data-no-render>
 			const tableBodyEl = document.getElementById('table-body');
-			
-			/*games_data.forEach((game_data) => {
-				const name = game_data.name;
-				const img_url = game_data.img;
-				const genres = game_data.genre.join(', ');
-				const characters_obj = game_data.characters;
-				const price_obj = game_data.price;
-				const labels = game_data.labels;
-				
-				const characters_formatted = `${characters_obj.total_count} characters`;
-				const price_formatted = `${price_obj.amount}${price_obj.suffix}`;
-				
-				const data_obj = {
-					img_url,
-					name,
-					genres,
-					characters: characters_formatted,
-					price: price_formatted
-				};
-				
-				const template = document.getElementById('game-row-template').innerHTML;
-				tableBodyEl.innerHTML += Mustache.render( template, data_obj );
-				
-				const template = document.getElementById('game-row-template-ideal').innerHTML;
-				tableBodyEl.innerHTML = Sqrl.render(template, games_data); */
-				
-				const template = document.getElementById('game-row-template-ideal').innerHTML;
-				tableBodyEl.innerHTML = eta.render(template, games_data);
-			//});
+			const etaJS = new eta.Eta();
+			const template = document.getElementById('game-row-template').innerHTML;
+			tableBodyEl.innerHTML = etaJS.renderString(template, games_data);
 		</script>
 		
-		<script id="game-row-template-ideal" type="x-tmpl-eta">
-			<% @each(it) => game}} %>
-				<tr>
-					<td><div class="thumbnail" style="background-image: url('{{game.img}}');"></div></td>
-					<td>{{ game.name }}</td>
-					<td>{{ game.genre.join(', ') }}</td>
-					<td>{{ game.characters.total_count }} characters</td>
-					<td>{{ game.price.amount }}</td>
-				</tr>
-			{{/each}}
-    </script>
+		
 		
 	</body>
 </html>
