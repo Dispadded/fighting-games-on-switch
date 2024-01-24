@@ -24,4 +24,6 @@ jobs:
           query-to-output-element: '#table-body'
       
       - name: Generated HTML output
-        run: echo "${{ steps.generate_website.outputs['html-output'] }}" > test.html
+        env:
+          htmlOutput: ${{ steps.generate_website.outputs['html-output'] }}
+        run: echo $htmlOutput > test.html
