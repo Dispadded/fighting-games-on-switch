@@ -27,9 +27,11 @@ jobs:
           query-to-output-element: '#table-body'
       
       - name: Generated HTML output
+        env:
+          htmlOutput: ${{ steps.generate_website.outputs['html-output'] }}
         run: |
           mkdir output
-          echo '${{ steps.generate_website.outputs['html-output'] }}' > output/index.html
+          echo "$htmlOutput" > output/index.html
       
       - name: Deploy Website 🚀
         uses: JamesIves/github-pages-deploy-action@v4
