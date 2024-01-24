@@ -1,5 +1,5 @@
 name: Generate Website
-run-name: by ${{ github.actor }}
+run-name: Generate Website
 on:
   push:
     branches:
@@ -11,6 +11,9 @@ jobs:
     name: Generate static HTML files from JS template file and JSON data file
     
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
       - name: Parse & Build website files
         id: generate_website
         uses: prid13/nobeessr@main
