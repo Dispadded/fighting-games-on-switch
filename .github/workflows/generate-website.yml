@@ -1,0 +1,24 @@
+name: Generate Website
+run-name: by ${{ github.actor }}
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Generate-Static-Website:
+    runs-on: ubuntu-latest
+    name: Generate static HTML files from JS template file and JSON data file
+    
+    steps:
+      - name: Parse & Build website files
+        id: generate_website
+        uses: prid13/nobeessr@main
+        with:
+          json-data-file-path: 'json-data.js'
+          html-file-with-template: 'template.html'
+          query-to-template-element: '#game-row-template'
+          query-to-output-element: '#table-body'
+      
+      - name: Generated HTML output
+        run: echo "${{ steps.generate_website.outputs['html-output'] }}"
