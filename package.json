@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "eta": "^3.2.0",
-    "node-html-parser": "^6.1.12"
+    "node-html-parser": "^6.1.12",
+    "pretty": "^2.0.0"
   }
 }

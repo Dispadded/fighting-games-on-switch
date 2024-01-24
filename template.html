@@ -31,8 +31,10 @@
 			.table .thumbnail {
 				width: 20px;
 				height: 25px;
-				background-size: cover;
-				background-position: 50% 50%;
+				object-fit: cover;
+				vertical-align: middle;
+				-webkit-user-select: none; /* Safari */
+				user-select: none;
 			}
 			.table.thumb-large .thumbnail {
 				width: 40px;
@@ -135,7 +137,7 @@
 					const price_formatted = `${price_obj.amount}${price_obj.suffix}`;
 				%>
 				<tr>
-					<td><div class="thumbnail" style="background-image: url('<%= img_url %>');"></div></td>
+					<td><img class="thumbnail" src="<%= img_url %>"></td>
 					<td><%= name %></td>
 					<td><%= genres %></td>
 					<td><%= characters_formatted %></td>

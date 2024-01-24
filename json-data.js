@@ -157,6 +157,22 @@ window[document.currentScript.getAttribute('data-var-name')] = (
       "suffix": "kr",
       "currency": "NOK"
     }
-  }
+  },
+	{
+		"name": "The King of Fighters XIII: Global Match",
+		"img": "https://cdn2.steamgriddb.com/thumb/fed540390a4f67cbb118e3a9841eb650.jpg",
+		"genre": [
+			"2D Sprites"
+		],
+		"characters": {
+			"total_count": 36,
+			"format": "{{total}} characters"
+		},
+		"price": {
+			"amount": 200,
+			"suffix": "kr",
+			"currency": "NOK"
+		}
+	}
 ]
-); // DON'T REMOVE FIRST OF LAST LINES!! Raw JSON data should always be IN-BETWEEN them!
+); // DON'T REMOVE FIRST OR LAST LINES!! Raw JSON data should always be IN-BETWEEN them!
