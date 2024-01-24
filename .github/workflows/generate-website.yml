@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Generate static HTML files from JS template file and JSON data file
     
+    permissions:
+      contents: write
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
