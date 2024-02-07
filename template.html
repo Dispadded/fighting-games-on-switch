@@ -132,8 +132,9 @@
 					const characters_obj = game_data.characters;
 					const price_obj = game_data.price;
 					const labels = game_data.labels;
+					const characters_format = characters_obj.format; // `${characters_obj.total_count} characters`;
 					
-					const characters_formatted = `${characters_obj.total_count} characters`;
+					const characters_formatted = etaJS_json.renderString(characters_format, characters_obj);
 					const price_formatted = `${price_obj.amount}${price_obj.suffix}`;
 				%>
 				<tr>
@@ -151,6 +152,7 @@
 		<script data-no-render>
 			const tableBodyEl = document.getElementById('table-body');
 			const etaJS = new eta.Eta();
+			const etaJS_json = new eta.Eta({ useWith: true, tags: ['{{', '}}'], parse: { interpolate: '' } });
 			const template = document.getElementById('game-row-template').innerHTML;
 			tableBodyEl.innerHTML = etaJS.renderString(template, games_data);
 		</script>

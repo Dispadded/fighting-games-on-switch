@@ -10,7 +10,7 @@ window[document.currentScript.getAttribute('data-var-name')] = (
       "total_count": 23,
       "base_count": 23,
       "secondary_count": 15,
-      "format": "{{base}} characters + {{secondary}} secondary"
+      "format": "{{base_count}} characters + {{secondary_count}} secondary"
     },
     "price": {
       "amount": 479,
@@ -38,7 +38,7 @@ window[document.currentScript.getAttribute('data-var-name')] = (
       "total_count": 37,
       "base_count": 25,
       "dlc_count": 12,
-      "format": "{{total}} ({{base}} base + {{dlc}} DLC)"
+      "format": "{{total_count}} ({{base_count}} base + {{dlc_count}} DLC)"
     },
     "price": {
       "amount": 109,
@@ -60,7 +60,7 @@ window[document.currentScript.getAttribute('data-var-name')] = (
     ],
     "characters": {
       "total_count": 16,
-      "format": "{{total}} characters"
+      "format": "{{total_count}} characters"
     },
     "price": {
       "amount": 193,
@@ -77,7 +77,7 @@ window[document.currentScript.getAttribute('data-var-name')] = (
     ],
     "characters": {
       "total_count": 29,
-      "format": "{{total}} characters"
+      "format": "{{total_count}} characters"
     },
     "price": {
       "amount": 123,
@@ -94,7 +94,7 @@ window[document.currentScript.getAttribute('data-var-name')] = (
     ],
     "characters": {
       "total_count": 7,
-      "format": "{{total}} characters!"
+      "format": "{{total_count}} characters!"
     },
     "price": {
       "amount": 102,
@@ -112,7 +112,7 @@ window[document.currentScript.getAttribute('data-var-name')] = (
     ],
     "characters": {
       "total_count": 22,
-      "format": "{{total}} characters"
+      "format": "{{total_count}} characters"
     },
     "price": {
       "amount": 274,
@@ -132,7 +132,7 @@ window[document.currentScript.getAttribute('data-var-name')] = (
       "total_count": 26,
       "base_count": "12",
       "dlc_count": "14",
-      "format": "{{total}} ({{base}} base + {{dlc}} DLC)"
+      "format": "{{total_count}} ({{base_count}} base + {{dlc_count}} DLC)"
     },
     "price": {
       "amount": 207,
@@ -150,7 +150,7 @@ window[document.currentScript.getAttribute('data-var-name')] = (
       "total_count": 55,
       "base_count": "51",
       "dlc_count": "4",
-      "format": "**{{base}}** base characters!! + {{dlc}} DLC"
+      "format": "**{{base_count}}** base characters!! + {{dlc_count}} DLC"
     },
     "price": {
       "amount": 279,
@@ -166,7 +166,7 @@ window[document.currentScript.getAttribute('data-var-name')] = (
 		],
 		"characters": {
 			"total_count": 36,
-			"format": "{{total}} characters"
+			"format": "{{total_count}} characters"
 		},
 		"price": {
 			"amount": 200,
