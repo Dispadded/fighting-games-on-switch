@@ -1,0 +1,152 @@
+/* GENERAL */
+
+body {
+	background-color: aliceblue;
+	/* background: url('https://media.istockphoto.com/id/1455535100/vector/dynamic-circle-line-long-background-white-stripe-texture-concentric-gray-subtle-element.jpg?s=612x612&w=0&k=20&c=GbA_eY4DSN-ABZQocWxGCbJgCD-l79YIlCdSKxzjGj4='); */
+	background: url(https://t3.ftcdn.net/jpg/00/86/25/06/360_F_86250669_ReQtUtU6TZPOrk8owS7P4M17hJJagziy.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.title {
+	margin-top: 10px;
+	margin-bottom: 14px;
+	align-self: center;
+	padding-left: 20px;
+	font-weight: 700;
+}
+
+.description-text {
+	margin: 0;
+	padding: 12px 0;
+	padding-left: 15px;
+	padding-top: 6px;
+	padding-bottom: 15px;
+	color: #4e4e4e;
+	/* font-style: italic; */
+	font-size: 0.9em;
+	/* border-left: 3px solid #80808085; */
+	background: #8080801f;
+	background: linear-gradient(171deg, #8080801f, transparent);
+	margin-right: 15px;
+}
+
+
+/* NAV */
+
+.navbar-section .columns {
+	flex-grow: 1;
+	justify-content: space-between;
+}
+.navbar-section .columns .column {
+	display: flex;
+	align-items: center;
+}
+.flex-end {
+	justify-content: flex-end;
+}
+
+
+/* TABLE */
+
+.table {
+	background: white;
+	border-radius: 10px;
+	outline: 2px solid rgb(94 94 94 / 60%);
+	border-collapse: collapse;
+	box-shadow: 0px 5px 0 0 #0000006e;
+}
+.table .table-header {
+	background: #5e5e5e;
+	color: white;
+	outline: 2px solid #5e5e5e;
+	border-radius: 10px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.table .thumbnail {
+	width: 20px;
+	height: 25px;
+	object-fit: cover;
+	vertical-align: middle;
+	-webkit-user-select: none; /* Safari */
+	user-select: none;
+}
+.table.thumb-large .thumbnail {
+	width: 40px;
+	height: 50px;
+}
+
+.table tr td:first-child {
+	width: 20px;
+	padding-right: 0.2rem;
+}
+.table tr td:nth-child(2) {
+	font-weight: bold;
+}
+.table tr td:last-child, .table tr th:last-child {
+	text-align: right;
+}
+
+.table td, .table th {
+	padding: 0.2rem 0.4rem;
+}
+
+
+table > tbody > tr > td, table > thead > tr > th {
+	padding: 8px 10px;
+}
+
+table > tbody > tr {
+	transition: background 100ms ease-out;
+}
+	table > tbody > tr:hover {
+		background: rgb(234 234 234) !important;
+		transition: none;
+	}
+	table > tbody > tr:hover > td:nth-child(2) {
+		transform: scale(1.02);
+	}
+	table > tbody > tr > td:nth-child(2) {
+		transform-origin: 0% 100%;
+		transition: transform 150ms ease-out;
+	}
+
+
+/* border radius fix first + last row */
+table > thead > tr:last-child > th:first-child {
+	border-top-left-radius: 10px;
+}
+table > thead > tr:last-child > th:last-child {
+	border-top-right-radius: 10px;
+}
+table > tbody > tr:last-child > td:first-child {
+	border-bottom-left-radius: 10px;
+}
+table > tbody > tr:last-child > td:last-child {
+	border-bottom-right-radius: 10px;
+}
+
+/* make second + last row a bit taller */
+table > tbody > tr:nth-child(1) > td {
+	padding-top: 0.4rem;
+}
+table > tbody > tr:last-child > td {
+	padding-bottom: 0.5rem;
+}
+
+
+.table th {
+	padding: 0.3rem 0.8rem;
+	padding-bottom: 0.4rem;
+	border-bottom: none;
+}
+
+.table td {
+	padding: 0.2rem 0.8rem;
+}
+
+.table tr:last-child td {
+	border-bottom: none;
+}
